@@ -1,8 +1,9 @@
 require "spec_helper"
+require "pry"
 
 describe Dec do
   class Test
-    include Dec
+    extend Dec
 
     square = -> (r) { r ** 2 }
     cube =   -> (r) { r ** 3 }

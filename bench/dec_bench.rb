@@ -4,9 +4,10 @@ require "benchmark"
 describe "Dec Bench" do
   it do
     class With
-      include Dec
+      extend Dec
 
       dec { |r| r ** 2 }
+      dec { |r| r ** 3 }
       def sum(a, b)
         a + b
       end

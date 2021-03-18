@@ -11,7 +11,7 @@ describe Dec do
     dec square
     dec cube
     def sum(a, b)
-      (a + b)
+      a + b
     end
   end
 

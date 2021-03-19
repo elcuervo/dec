@@ -11,5 +11,5 @@ Gem::Specification.new do |s|
   s.files             = `git ls-files`.split("\n")
   s.test_files        = `git ls-files test`.split("\n")
 
-  s.add_development_dependency("benchmark-ips")
+  s.add_development_dependency("benchmark-ips", "~> 2.8.4")
 end

@@ -1,0 +1,19 @@
+PATH
+  remote: .
+  specs:
+    dec (0.0.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    benchmark-ips (2.8.4)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  benchmark-ips (~> 2.8.4)
+  dec!
+
+BUNDLED WITH
+   2.2.14

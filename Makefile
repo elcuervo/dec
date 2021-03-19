@@ -9,6 +9,9 @@ build:
 publish: build
 	gem push *.gem
 
+irb:
+	irb -Ilib -rdec
+
 test:
 	ruby -Ilib:spec spec/*_spec.rb
 

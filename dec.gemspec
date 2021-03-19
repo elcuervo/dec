@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.version           = "0.0.1"
   s.summary           = "method decorator"
   s.authors           = ["elcuervo"]
-  s.licenses          = %w[MIT HUGWARE]
+  s.licenses          = %w[MIT]
   s.email             = ["elcuervo@elcuervo.net"]
   s.homepage          = "http://github.com/elcuervo/dec"
   s.files             = `git ls-files`.split("\n")

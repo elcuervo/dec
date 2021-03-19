@@ -1,5 +1,6 @@
 require "spec_helper"
 require "benchmark"
+require "benchmark/ips"
 
 describe "Dec Bench" do
   it do
@@ -19,9 +20,9 @@ describe "Dec Bench" do
       end
     end
 
-    n = 1_000_000
+    n = 1_000
 
-    Benchmark.bmbm do |x|
+    Benchmark.ips do |x|
       x.report(With) do
         n.times { With.new.sum(1, 2) }
       end
@@ -29,6 +30,8 @@ describe "Dec Bench" do
       x.report(Without) do
         n.times { Without.new.sum(1, 2) }
       end
+
+      x.compare!
     end
   end
 end

@@ -23,7 +23,11 @@ module Dec
 
     alias_method :"#{NS}#{method_sym}", method_sym
 
-    _executor[method_sym] = dec_stack.select { |fn| fn.respond_to?(:call) }.reverse
+    _executor[method_sym] = dec_stack
+      .select { |fn| fn.respond_to?(:call) }
+      .reverse
+
+    dec_stack.clear
 
     class_eval <<-RB, __FILE__, __LINE__ + 1
       def #{method_sym}(*args, **kwargs, &block)

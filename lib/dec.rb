@@ -1,6 +1,8 @@
 module Dec
+  HASH_ARRAY = -> (h, k) { h[k] = [] }
+
   def _executor
-    @_executor ||= Hash.new { |h, k| h[k] = [] }
+    @_executor ||= Hash.new(&HASH_ARRAY)
   end
 
   def dec_stack
